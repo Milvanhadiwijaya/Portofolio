@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Tema Hitam Putih</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Untuk icon -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Hitam */
+            color: #fff; /* Putih */
+            line-height: 1.6;
+        }
+
+        /* Navigasi */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+            padding: 10px 0;
+            z-index: 1000;
+            border-bottom: 2px solid #fff; /* Garis putih di bawah nav */
+            border-radius: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+            border-radius: 50px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #fff; /* Background putih saat hover atau active */
+            color: #000; /* Teks hitam */
+        }
+
+        /* Section umum */
+        section {
+            padding: 100px 20px 50px; /* Padding atas untuk nav fixed */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Pembatas antara section */
+        section:not(:last-child)::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #fff 0%, #000 50%, #fff 100%); /* Garis unik dengan gradien */
+            margin: 50px auto 0;
+        }
+
+        /* Container untuk beranda */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .biodata {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+            background-color: #333;
+            border-radius: 30px;
+        }
+
+        .biodata div {
+            margin: 10px;
+            text-align: left;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1300px;
+        }
+
+        .skill {
+            text-align: center;
+            margin: 50px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .skill i {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .portfolio img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #fff;
+        }
+
+        /* Contact */
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .contact-left {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .contact-left form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-left input, .contact-left textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .contact-left button {
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .contact-right a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-right i {
+            margin-right: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skills, .contact {
+                flex-direction: column;
+            }
+            .contact-left, .contact-right {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#portfolio">Karya</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <img src="MILVAN HADIWIJAYA.jpg" alt="Foto Saya"> <!-- Ganti dengan foto asli -->
+            <h1>Halo, Saya Milvan 👋</h1>
+            <p>Saya adalah seorang web developer yang passionate dengan desain dan teknologi. Saya suka membuat website yang menarik dan fungsional.</p>
+            <div class="biodata">
+                <div>
+                    <h3>Nama Lengkap</h3>
+                    <p>Milvan Hadiwijaya</p>
+                </div>
+                <div>
+                    <h3>Tempat Tinggal</h3>
+                    <p>Medan, Sumatera Utara, Indonesia</p>
+                </div>
+                <div>
+                    <h3>Pendidikan Terakhir</h3>
+                    <p>SMK TELKOM 1 MEDAN</p>
+                </div>
+                <div>
+                    <h3>Tanggal Lahir</h3>
+                    <p>8 Oktober 2008</p>
+                </div>
+                <div>
+                    <h3>Pengalaman</h3>
+                    <p>2 tahun sebagai Web Developer</p>
+                </div>
+                <div>
+                    <h3>Hobi</h3>
+                    <p>Olahraga, Mendengar Music</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Keahlian Saya</h2>
+        <div class="skills">
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Ahli dalam struktur markup untuk web.</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Menguasai styling dan layout responsif.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-palette"></i>
+                <h3>UI/UX Design</h3>
+                <p>Desain antarmuka yang user-friendly.</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-wordpress"></i>
+                <h3>WordPress</h3>
+                <p>Pembuatan situs dengan CMS WordPress.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Hasil Karya Saya</h2>
+        <div class="portfolio">
+            <img src="iPhone 15 Pro.png" alt="Karya 1">
+            <img src="iPhone 15.png" alt="Karya 2">
+            <img src="Nothing Phone 1 (1).png" alt="Karya 3">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Saya</h2>
+        <div class="contact">
+            <div class="contact-left">
+                <form action="#" method="post"> <!-- Form ini hanya tampilan, tidak ada backend -->
+                    <input type="text" name="name" placeholder="Nama Anda" required>
+                    <input type="email" name="email" placeholder="Email Anda" required>
+                    <input type="text" name="subject" placeholder="Subjek" required>
+                    <textarea name="message" placeholder="Pesan" rows="5" required></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <a href="milvanhadiwijaya2008@gmail.com"><i class="fas fa-envelope"></i>Email: milvanhadiwijaya2008@gmail.com</a>
+                <a href="https://wa.me/081361424224"><i class="fab fa-whatsapp"></i>WhatsApp: +6281361424224</a>
+                <a href="https://instagram.com/milvanajah"><i class="fab fa-instagram"></i>Instagram: @milvanajah</a>
+                <a href="https://linkedin.com/in/milvan hadiwijaya"><i class="fab fa-linkedin"></i>LinkedIn: milvan hadiwijaya</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Script sederhana untuk highlight navigasi saat scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
